@@ -61,7 +61,7 @@ public class FarmerDetailJPanel extends javax.swing.JPanel {
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 204, 0));
-        jLabel4.setText("Gender : ");
+        jLabel4.setText("SSN :");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(51, 204, 0));

@@ -66,7 +66,7 @@ public class EcoSystem extends Organization  {
     }
 
     @Override
-    public HashSet<Role> getSupportedRole() {
+    public ArrayList<Role> getSupportedRole() {
         
 //  roles.add(new System());
 //        roles.add(new HospitalAdminRole());

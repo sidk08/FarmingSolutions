@@ -77,7 +77,7 @@
               <SubComponents>
                 <Component class="javax.swing.JButton" name="manageNetworkJButton">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Manage Network"/>
+                    <Property name="text" type="java.lang.String" value="Manage State Network"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageNetworkJButtonActionPerformed"/>

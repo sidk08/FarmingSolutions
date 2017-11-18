@@ -8,6 +8,7 @@ package Business.Organization;
 import Business.Roles.Role;
 import java.util.HashSet;
 import Business.Roles.FarmerRole;
+import java.util.ArrayList;
 
 /**
  *
@@ -19,7 +20,7 @@ public class FarmerOrganisation extends Organization {
     }
     
     @Override
-    public HashSet<Role> getSupportedRole() {
+    public ArrayList<Role> getSupportedRole() {
         
         return null;
     }

@@ -47,7 +47,7 @@ public abstract class Organization {
         ++counter;
     }
 
-    public abstract HashSet<Role> getSupportedRole();
+    public abstract ArrayList<Role> getSupportedRole();
     
     public UserAccountDirectory getUserAccountDirectory() {
         return userAccountDirectory;

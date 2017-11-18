@@ -49,7 +49,7 @@ public class AddFarmerJPanel extends javax.swing.JPanel {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(51, 204, 0));
-        jLabel3.setText("Gender : ");
+        jLabel3.setText(" SSN :");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 204, 0));

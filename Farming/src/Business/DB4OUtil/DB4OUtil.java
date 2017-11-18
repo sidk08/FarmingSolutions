@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package Business.DB4OUtil;
-//import Business.ConfigureASystem;
-//import Business.EcoSystem;
+import Business.ConfigureASystem;
+import Business.EcoSystem;
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
@@ -16,7 +16,7 @@ import com.db4o.ta.TransparentPersistenceSupport;
  *
  * @author Aastha
  */
-public class DB4OUtil {private static final String FILENAME = "E:\\DataBank1.db4o"; // path to the data store
+public class DB4OUtil {private static final String FILENAME = "C:\\DataBank1.db4o"; // path to the data store
     private static DB4OUtil dB4OUtil;
     
     public synchronized static DB4OUtil getInstance(){

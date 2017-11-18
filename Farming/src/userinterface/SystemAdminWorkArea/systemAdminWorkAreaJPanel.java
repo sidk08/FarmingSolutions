@@ -123,35 +123,35 @@ public class systemAdminWorkAreaJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void manageNetworkJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageNetworkJButtonActionPerformed
-        ManageNetworksJPanel manageNetworkJPanel = new  ManageNetworksJPanel(userProcessContainer, system);
-        userProcessContainer.add("manageNetworkJPanel", manageNetworkJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+//        ManageNetworksJPanel manageNetworkJPanel = new  ManageNetworksJPanel(userProcessContainer, system);
+//        userProcessContainer.add("manageNetworkJPanel", manageNetworkJPanel);
+//        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+//        layout.next(userProcessContainer);
     }//GEN-LAST:event_manageNetworkJButtonActionPerformed
 
     private void manageAdminJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageAdminJButtonActionPerformed
         // TODO add your handling code here:
-        ManageEnterprisesAdminJPanel manageEnterpriseAdminJPanel = new ManageEnterprisesAdminJPanel(userProcessContainer, system);
-        userProcessContainer.add("manageEnterpriseAdminJPanel", manageEnterpriseAdminJPanel);
-
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+//        ManageEnterprisesAdminJPanel manageEnterpriseAdminJPanel = new ManageEnterprisesAdminJPanel(userProcessContainer, system);
+//        userProcessContainer.add("manageEnterpriseAdminJPanel", manageEnterpriseAdminJPanel);
+//
+//        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+//        layout.next(userProcessContainer);
     }//GEN-LAST:event_manageAdminJButtonActionPerformed
 
     private void manageEnterpriseJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageEnterpriseJButtonActionPerformed
 
-        ManageEnterprisesJPanel manageEnterpriseJPanel = new ManageEnterprisesJPanel(userProcessContainer, system);
-        userProcessContainer.add("manageEnterpriseJPanel", manageEnterpriseJPanel);
-
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+//        ManageEnterprisesJPanel manageEnterpriseJPanel = new ManageEnterprisesJPanel(userProcessContainer, system);
+//        userProcessContainer.add("manageEnterpriseJPanel", manageEnterpriseJPanel);
+//
+//        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+//        layout.next(userProcessContainer);
     }//GEN-LAST:event_manageEnterpriseJButtonActionPerformed
 
     private void JTreevalueChangedAction(javax.swing.event.TreeSelectionEvent evt) {//GEN-FIRST:event_JTreevalueChangedAction
-        DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) JTree.getLastSelectedPathComponent();
-        if (selectedNode != null) {
-            selectedNodeJLabel.setText(selectedNode.toString());
-        }
+//        DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) JTree.getLastSelectedPathComponent();
+//        if (selectedNode != null) {
+//            selectedNodeJLabel.setText(selectedNode.toString());
+//        }
     }//GEN-LAST:event_JTreevalueChangedAction
 
 

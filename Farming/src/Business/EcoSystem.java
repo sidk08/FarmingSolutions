@@ -1,29 +1,31 @@
 package Business;
 
-//import Business.Disease.DiseaseCatalog;
-//import Business.Network.Network;
-//import Business.Organization.Organization;
+
+import Business.Network.Network;
+import Business.Organization.Organization;
+import Business.Roles.Role;
 //import Business.Role.Role;
 //import Business.Role.SystemAdminRole;
 //import Business.Vaccine.VaccineCatalog;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  *
  * @author Aastha
  */
-public class EcoSystem extends Organization {
+public class EcoSystem extends Organization  {
 
+   
+   // private ArrayList<Network> networkList;
     private static EcoSystem business;
     private ArrayList<Network> networkList;
-    private DiseaseCatalog diseaseCatalog;
-    private VaccineCatalog vaccineCatalog;
+    
 
     public static EcoSystem getInstance() {
         if (business == null) {
             business = new EcoSystem();
-            business.setDiseaseCatalog(new DiseaseCatalog());
-            business.setVaccineCatalog(new VaccineCatalog());
+          
         }
         return business;
     }
@@ -43,12 +45,16 @@ public class EcoSystem extends Organization {
         return network;
     }
 
+    /**
+     *
+     * @return
+     */
 //    @Override
-    public ArrayList<Role> getSupportedRole() {
-        ArrayList<Role> roleList = new ArrayList<>();
-        roleList.add(new SystemAdminRole());
-        return roleList;
-    }
+//    public ArrayList<Role> getSupportedRole() {
+//        ArrayList<Role> roleList = new ArrayList<>();
+//        roleList.add(new SystemAdmin());
+//        return roleList;
+//    }
 
     public boolean checkIfUsernameIsUnique(String username) {
 
@@ -59,22 +65,14 @@ public class EcoSystem extends Organization {
         return true;
     }
 
-    public DiseaseCatalog getDiseaseCatalog() {
-        return diseaseCatalog;
-    }
+    @Override
+    public HashSet<Role> getSupportedRole() {
+        
+//  roles.add(new System());
+//        roles.add(new HospitalAdminRole());
+throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   }
 
-    public void setDiseaseCatalog(DiseaseCatalog diseaseCatalog) {
-        this.diseaseCatalog = diseaseCatalog;
-    }
-
-    public VaccineCatalog getVaccineCatalog() {
-        return vaccineCatalog;
-    }
-
-    public void setVaccineCatalog(VaccineCatalog vaccineCatalog) {
-        this.vaccineCatalog = vaccineCatalog;
-    }
-    
     
     
 }

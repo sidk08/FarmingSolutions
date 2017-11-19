@@ -19,6 +19,11 @@ public class EcoSystem extends Organization  {
    
    // private ArrayList<Network> networkList;
     private static EcoSystem business;
+
+   
+     public static void setInstance(EcoSystem system) {
+        business=system;
+    }
     private ArrayList<Network> networkList;
     
 
@@ -45,17 +50,7 @@ public class EcoSystem extends Organization  {
         return network;
     }
 
-    /**
-     *
-     * @return
-     */
-//    @Override
-//    public ArrayList<Role> getSupportedRole() {
-//        ArrayList<Role> roleList = new ArrayList<>();
-//        roleList.add(new SystemAdmin());
-//        return roleList;
-//    }
-
+     
     public boolean checkIfUsernameIsUnique(String username) {
 
 //        if (!this.getUserAccountDirectory().checkIfUsernameIsUnique(username)) {

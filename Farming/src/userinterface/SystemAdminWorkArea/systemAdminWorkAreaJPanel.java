@@ -5,17 +5,35 @@
  */
 package userinterface.SystemAdminWorkArea;
 
+import Business.EcoSystem;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Aastha
  */
 public class systemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
+     
+
+    JPanel userProcessContainer;
+    EcoSystem system;
+
+    
     /**
      * Creates new form systemAdminWorkAreaJPanel
      */
     public systemAdminWorkAreaJPanel() {
         initComponents();
+    
+    }
+
+    public systemAdminWorkAreaJPanel(JPanel userProcessContainer, EcoSystem business) {
+       
+         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.system = system;
+// throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**

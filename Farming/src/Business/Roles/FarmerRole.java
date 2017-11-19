@@ -15,7 +15,19 @@ import javax.swing.JPanel;
  *
  * @author admin
  */
-public class FarmerRole{
+public class FarmerRole extends Role{
+
+    public FarmerRole() {
+        
+    }
+    
+    
+    
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, Organization organization, Enterprise enterprise, EcoSystem business) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    return null;
+    }
     
     
 }

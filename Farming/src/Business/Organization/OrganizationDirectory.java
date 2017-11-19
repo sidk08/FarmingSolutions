@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -44,3 +45,43 @@ public class OrganizationDirectory {
         return organization;
     }
 }
+=======
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Business.Organization;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author admin
+ */
+public class OrganizationDirectory {
+    
+    private ArrayList<Organization> organizationList;
+
+    public OrganizationDirectory() {
+        organizationList = new ArrayList<>();
+    }
+
+    public ArrayList<Organization> getOrganizationList() {
+        return organizationList;
+    }
+    
+    public Organization createOrganization(Organization.Type type){
+        Organization organization = null;
+        if (type.getValue().equals(Organization.Type.ExpertOrganisation.getValue())){
+            organization = new ExpertOrganization();
+            organizationList.add(organization);
+        }
+        else if (type.getValue().equals(Organization.Type.FarmerOrganisation.getValue())){
+            organization = new FarmerOrganization();
+            organizationList.add(organization);
+        }
+        return organization;
+    }
+}
+>>>>>>> 6eef278d3b9ed04d227b037dcf5d933fe079c4a1

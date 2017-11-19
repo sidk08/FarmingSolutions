@@ -14,7 +14,7 @@ import java.util.ArrayList;
  *
  * @author admin
  */
-public class Enterprise extends Organization{
+public abstract class Enterprise extends Organization{
     private EnterpriseType enterpriseType;
     private OrganizationDirectory organizationDirectory;
     
@@ -24,14 +24,8 @@ public class Enterprise extends Organization{
         organizationDirectory = new OrganizationDirectory();
     }
 
-    @Override
-    public ArrayList<Role> getSupportedRole() {
-       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-       return null;
-    }
-    
     public enum EnterpriseType{
-        Farming("Farming"),Bank("Bank"), Doctor("Doctor"), ;
+        District("District"),Bank("Bank"), Doctor("Doctor"), ;
         
         private String value;
 

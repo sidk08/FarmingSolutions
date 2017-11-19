@@ -14,14 +14,15 @@ import java.util.ArrayList;
  *
  * @author admin
  */
-public class FarmerOrganisation extends Organization {
-     public FarmerOrganisation() {
+public class FarmerOrganization extends Organization {
+     public FarmerOrganization() {
         super(Organization.Type.FarmerOrganisation.getValue());
     }
     
     @Override
     public ArrayList<Role> getSupportedRole() {
-        
-        return null;
+        ArrayList<Role> roles = new ArrayList<>();
+        roles.add(new FarmerRole());
+        return roles;
     }
 }

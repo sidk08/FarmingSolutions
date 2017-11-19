@@ -5,10 +5,34 @@
  */
 package Business.Organization;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author admin
  */
 public class OrganizationDirectory {
     
+    private ArrayList<Organization> organizationList;
+
+    public OrganizationDirectory() {
+        organizationList = new ArrayList<>();
+    }
+
+    public ArrayList<Organization> getOrganizationList() {
+        return organizationList;
+    }
+    
+    public Organization createOrganization(Organization.Type type){
+        Organization organization = null;
+        if (type.getValue().equals(Organization.Type.ExpertOrganisation.getValue())){
+            organization = new ExpertOrganization();
+            organizationList.add(organization);
+        }
+        else if (type.getValue().equals(Organization.Type.FarmerOrganisation.getValue())){
+            organization = new FarmerOrganization();
+            organizationList.add(organization);
+        }
+        return organization;
+    }
 }

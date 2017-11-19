@@ -4,6 +4,8 @@ package Business;
 import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.Roles.Role;
+import Business.Roles.SystemAdminRole;
+import com.db4o.collections.ActivatableArrayList;
 //import Business.Role.Role;
 //import Business.Role.SystemAdminRole;
 //import Business.Vaccine.VaccineCatalog;
@@ -49,29 +51,21 @@ public class EcoSystem extends Organization  {
      *
      * @return
      */
-//    @Override
-//    public ArrayList<Role> getSupportedRole() {
-//        ArrayList<Role> roleList = new ArrayList<>();
-//        roleList.add(new SystemAdmin());
-//        return roleList;
-//    }
-
     public boolean checkIfUsernameIsUnique(String username) {
 
-//        if (!this.getUserAccountDirectory().checkIfUsernameIsUnique(username)) {
-//            return false;
-//        }
+        if (!this.getUserAccountDirectory().checkIfUsernameIsUnique(username)) {
+            return false;
+        }
 
         return true;
     }
 
     @Override
     public ArrayList<Role> getSupportedRole() {
-        
-//  roles.add(new System());
-//        roles.add(new HospitalAdminRole());
-throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-   }
+        ArrayList<Role> roles = new ArrayList<Role>();
+        roles.add(new SystemAdminRole());
+        return roles;
+    }
 
     
     

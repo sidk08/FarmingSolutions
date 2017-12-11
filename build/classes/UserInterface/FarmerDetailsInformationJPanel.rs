@@ -1,3 +1,0 @@
-userinterface.Expert.FarmerDetailsInformationJPanel
-userinterface.Expert.FarmerDetailsInformationJPanel$2
-userinterface.Expert.FarmerDetailsInformationJPanel$1

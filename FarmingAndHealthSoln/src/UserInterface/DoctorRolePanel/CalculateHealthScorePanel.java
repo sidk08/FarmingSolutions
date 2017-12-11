@@ -77,6 +77,7 @@ public class CalculateHealthScorePanel extends javax.swing.JPanel {
         sugarTxt = new javax.swing.JTextField();
         bpLowTxt2 = new javax.swing.JTextField();
         weightTxt1 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -142,7 +143,7 @@ public class CalculateHealthScorePanel extends javax.swing.JPanel {
         jLabel11.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Health Score : ");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 580, 150, 60));
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 500, 150, 60));
 
         healthScoreTxt.setBackground(new java.awt.Color(0, 153, 153));
         healthScoreTxt.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -151,13 +152,13 @@ public class CalculateHealthScorePanel extends javax.swing.JPanel {
                 healthScoreTxtActionPerformed(evt);
             }
         });
-        add(healthScoreTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 580, 220, 50));
-        add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 630, 220, 20));
+        add(healthScoreTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 500, 220, 50));
+        add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 550, 220, 20));
 
         jLabel12.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText(" Response :");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 580, 170, 60));
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 500, 170, 60));
 
         descrTxt.setBackground(new java.awt.Color(0, 153, 153));
         descrTxt.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -166,8 +167,8 @@ public class CalculateHealthScorePanel extends javax.swing.JPanel {
                 descrTxtActionPerformed(evt);
             }
         });
-        add(descrTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 580, 240, 50));
-        add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 630, 240, 20));
+        add(descrTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 500, 240, 50));
+        add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 550, 240, 20));
 
         sendFeedbackBtn.setBackground(new java.awt.Color(0, 153, 153));
         sendFeedbackBtn.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
@@ -218,6 +219,7 @@ public class CalculateHealthScorePanel extends javax.swing.JPanel {
             }
         });
         add(weightTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 230, 560, 30));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 2010, 940));
     }// </editor-fold>//GEN-END:initComponents
 
     private void descrTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descrTxtActionPerformed
@@ -320,6 +322,7 @@ public class CalculateHealthScorePanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JSeparator jSeparator1;

@@ -19,7 +19,18 @@ public class SoilData {
     private double waterValue;
     private double acidity;
     private Date date;
-private String IsSoilScore;
+    private String IsSoilScore;
+    private String typeOfLand;
+    private String cropPlanted;
+    private String fertiliserType;
+    private String technologyUsed;
+    private double monthlyincome;
+    
+    private float soilScore;
+    
+    public SoilData(){
+        date = new Date();
+    }
 
     public String getIsSoilScore() {
         return IsSoilScore;
@@ -28,8 +39,6 @@ private String IsSoilScore;
     public void setIsSoilScore(String IsSoilScore) {
         this.IsSoilScore = IsSoilScore;
     }
-
-   
     
     public String getTypeOfLand() {
         return typeOfLand;
@@ -70,18 +79,7 @@ private String IsSoilScore;
     public void setMonthlyincome(double monthlyincome) {
         this.monthlyincome = monthlyincome;
     }
-    private String typeOfLand;
-    private String cropPlanted;
-    private String fertiliserType;
-    private String technologyUsed;
-    private double monthlyincome;
-    
-    private float soilScore;
-    
-    public SoilData(){
-        date = new Date();
-    }
-
+       
     public double getNitroValue() {
         return nitroValue;
     }

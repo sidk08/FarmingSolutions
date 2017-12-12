@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 package UserInterface.GovtRolePanel;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
 import java.awt.CardLayout;
 import java.net.URL;
 import java.io.BufferedReader;
@@ -13,10 +16,16 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import javax.swing.JPanel;
+<<<<<<< HEAD
 
 /**
  *
  * @author sidku
+=======
+/**
+ *
+ * @author Aastha
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
  */
 public class NewJPanel extends javax.swing.JPanel {
 
@@ -24,8 +33,12 @@ public class NewJPanel extends javax.swing.JPanel {
      * Creates new form NewJPanel
      */
     private JPanel container;
+<<<<<<< HEAD
     public NewJPanel(JPanel container) {
         initComponents();
+=======
+    public NewJPanel(JPanel container) { initComponents();
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
         this.container = container;
         try {
 
@@ -71,6 +84,10 @@ public class NewJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
+=======
+        jPanel1 = new javax.swing.JPanel();
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
         weatheroutput = new javax.swing.JLabel();
         backBtn = new javax.swing.JButton();
 
@@ -83,6 +100,7 @@ public class NewJPanel extends javax.swing.JPanel {
             }
         });
 
+<<<<<<< HEAD
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -93,24 +111,70 @@ public class NewJPanel extends javax.swing.JPanel {
                         .addGap(156, 156, 156)
                         .addComponent(backBtn))
                     .addGroup(layout.createSequentialGroup()
+=======
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(156, 156, 156)
+                        .addComponent(backBtn))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
                         .addGap(114, 114, 114)
                         .addComponent(weatheroutput, javax.swing.GroupLayout.PREFERRED_SIZE, 768, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(69, Short.MAX_VALUE))
         );
+<<<<<<< HEAD
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+=======
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
                 .addGap(103, 103, 103)
                 .addComponent(weatheroutput, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69)
                 .addComponent(backBtn)
                 .addContainerGap(345, Short.MAX_VALUE))
         );
+<<<<<<< HEAD
+=======
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 951, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 621, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
                 container.remove(this);
+=======
+        container.remove(this);
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
         CardLayout layout = (CardLayout) container.getLayout();
         layout.previous(container);
     }//GEN-LAST:event_backBtnActionPerformed
@@ -118,6 +182,10 @@ public class NewJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBtn;
+<<<<<<< HEAD
+=======
+    private javax.swing.JPanel jPanel1;
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
     private javax.swing.JLabel weatheroutput;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,13 +4,17 @@
  * and open the template in the editor.
  */
 package UserInterface.GovtRolePanel;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.DoctorOrganization;
 import Business.Organization.ExpertOrganization;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
+<<<<<<< HEAD
 import Business.WorkQueue.HealthReportRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
@@ -21,13 +25,25 @@ import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author sidku
+=======
+import Business.WorkQueue.WorkRequest;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+/**
+ *
+ * @author Aastha
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
  */
 public class MessageJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form MessageJPanel
      */
+<<<<<<< HEAD
     private JPanel container;
+=======
+   private JPanel container;
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
     private Network network;
     private UserAccount account;
     public MessageJPanel(JPanel container , UserAccount account, Network network) {
@@ -38,7 +54,10 @@ public class MessageJPanel extends javax.swing.JPanel {
         populateComboBox();
         populateTable();
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -48,11 +67,16 @@ public class MessageJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
+=======
+        jPanel1 = new javax.swing.JPanel();
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
         jLabel1 = new javax.swing.JLabel();
         orgJComboBox = new javax.swing.JComboBox();
         jScrollPane1 = new javax.swing.JScrollPane();
         messageTable = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
+<<<<<<< HEAD
         messageTxt = new javax.swing.JTextArea();
         sendMsgBtn = new javax.swing.JButton();
         backBtn = new javax.swing.JButton();
@@ -69,6 +93,16 @@ public class MessageJPanel extends javax.swing.JPanel {
             }
         });
 
+=======
+        jTextArea1 = new javax.swing.JTextArea();
+        sendMsgBtn = new javax.swing.JButton();
+
+        jPanel1.setMinimumSize(new java.awt.Dimension(1530, 770));
+        jPanel1.setName(""); // NOI18N
+
+        jLabel1.setText("Communicate with :");
+
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
         messageTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -89,6 +123,7 @@ public class MessageJPanel extends javax.swing.JPanel {
             }
         });
         jScrollPane1.setViewportView(messageTable);
+<<<<<<< HEAD
         if (messageTable.getColumnModel().getColumnCount() > 0) {
             messageTable.getColumnModel().getColumn(0).setResizable(false);
             messageTable.getColumnModel().getColumn(1).setResizable(false);
@@ -98,6 +133,12 @@ public class MessageJPanel extends javax.swing.JPanel {
         messageTxt.setColumns(20);
         messageTxt.setRows(5);
         jScrollPane2.setViewportView(messageTxt);
+=======
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane2.setViewportView(jTextArea1);
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
 
         sendMsgBtn.setText("Send Message");
         sendMsgBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -106,6 +147,7 @@ public class MessageJPanel extends javax.swing.JPanel {
             }
         });
 
+<<<<<<< HEAD
         backBtn.setText("Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,10 +162,20 @@ public class MessageJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+=======
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
                         .addGap(255, 255, 255)
                         .addComponent(jLabel1)
                         .addGap(33, 33, 33)
                         .addComponent(orgJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+<<<<<<< HEAD
                     .addGroup(layout.createSequentialGroup()
                         .addGap(76, 76, 76)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1061, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -155,11 +207,57 @@ public class MessageJPanel extends javax.swing.JPanel {
                             .addComponent(sendMsgBtn)
                             .addGap(25, 25, 25))))
                 .addContainerGap(382, Short.MAX_VALUE))
+=======
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(76, 76, 76)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1061, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(249, 249, 249)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(59, 59, 59)
+                        .addComponent(sendMsgBtn)))
+                .addContainerGap(438, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(76, 76, 76)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(orgJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(96, 96, 96)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(sendMsgBtn)
+                        .addGap(340, 340, 340))))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1575, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 762, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 762, Short.MAX_VALUE))
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void sendMsgBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendMsgBtnActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
         
         
         String message = messageTxt.getText().trim();
@@ -225,6 +323,31 @@ public class MessageJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void populateComboBox() {
+=======
+
+        WorkRequest wr  = new WorkRequest();
+
+        Organization org = (Organization) orgJComboBox.getSelectedItem();
+
+        account.getWorkQueue().getWorkRequestList().add(wr);
+
+        org.getWorkQueue().getWorkRequestList().add(wr);
+
+    }//GEN-LAST:event_sendMsgBtnActionPerformed
+
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTable messageTable;
+    private javax.swing.JComboBox orgJComboBox;
+    private javax.swing.JButton sendMsgBtn;
+    // End of variables declaration//GEN-END:variables
+ private void populateComboBox() {
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
     //    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         for(Enterprise ent : network.getEnterpriseDirectory().getEnterpriseList()){
             for(Organization org : ent.getOrganizationDirectory().getOrganizationList()){
@@ -256,5 +379,10 @@ public class MessageJPanel extends javax.swing.JPanel {
             }
         }
     
+<<<<<<< HEAD
     }
 }
+=======
+    }}
+
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58

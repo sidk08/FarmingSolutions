@@ -92,7 +92,11 @@ public class GovernmentOfficialJPanel extends javax.swing.JPanel {
             }
         });
         add(jButton1);
+<<<<<<< HEAD
         jButton1.setBounds(640, 70, 200, 29);
+=======
+        jButton1.setBounds(640, 70, 200, 25);
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
 
         jLabel1.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
@@ -115,11 +119,15 @@ public class GovernmentOfficialJPanel extends javax.swing.JPanel {
 
     private void messagesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_messagesBtnActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
         MessageJPanel msgPanel = new MessageJPanel(container, account, network);
         container.add("msgPanel", msgPanel);
         CardLayout layout = (CardLayout) container.getLayout();
         layout.next(container);
         
+=======
+
+>>>>>>> 44cdde9d19e5b6b2fc464486e1e3733964370b58
     }//GEN-LAST:event_messagesBtnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

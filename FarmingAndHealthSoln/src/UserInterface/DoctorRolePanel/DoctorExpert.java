@@ -187,7 +187,7 @@ public class DoctorExpert extends javax.swing.JPanel {
         model.setRowCount(0);
         Object[] row = new Object[6];
         
-        Iterator<WorkRequest> it = organization.getWorkQueue().getWorkRequestList().iterator(); 
+       Iterator<WorkRequest> it = organization.getWorkQueue().getWorkRequestList().iterator(); 
         while(it.hasNext()) {
             HealthReportRequest hrr =(HealthReportRequest) it.next();
             row[0] = hrr.getSender().getPerson();

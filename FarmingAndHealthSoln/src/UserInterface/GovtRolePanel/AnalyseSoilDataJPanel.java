@@ -72,6 +72,9 @@ public class AnalyseSoilDataJPanel extends javax.swing.JPanel {
     private void distComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_distComboBoxActionPerformed
         // TODO add your handling code here:
         draw_pie_chart();
+        
+        DistrictEnterprise distent = (DistrictEnterprise) distComboBox.getSelectedItem();
+//        for()
     }//GEN-LAST:event_distComboBoxActionPerformed
 
 

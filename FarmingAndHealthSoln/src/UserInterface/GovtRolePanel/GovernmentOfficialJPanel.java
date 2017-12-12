@@ -49,6 +49,8 @@ public class GovernmentOfficialJPanel extends javax.swing.JPanel {
 
         analyseSoil = new javax.swing.JButton();
         analyseHealth = new javax.swing.JButton();
+        messagesBtn = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setLayout(null);
@@ -73,6 +75,25 @@ public class GovernmentOfficialJPanel extends javax.swing.JPanel {
         add(analyseHealth);
         analyseHealth.setBounds(440, 430, 320, 40);
 
+        messagesBtn.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
+        messagesBtn.setText("Messages");
+        messagesBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                messagesBtnActionPerformed(evt);
+            }
+        });
+        add(messagesBtn);
+        messagesBtn.setBounds(440, 590, 320, 40);
+
+        jButton1.setText("Aaj ka mausam");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        add(jButton1);
+        jButton1.setBounds(640, 70, 200, 25);
+
         jLabel1.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -92,10 +113,25 @@ public class GovernmentOfficialJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_analyseHealthActionPerformed
 
+    private void messagesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_messagesBtnActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_messagesBtnActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        NewJPanel newPanel = new NewJPanel(container);
+        container.add("soilPanel", newPanel);
+        CardLayout layout = (CardLayout) container.getLayout();
+        layout.next(container);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton analyseHealth;
     private javax.swing.JButton analyseSoil;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton messagesBtn;
     // End of variables declaration//GEN-END:variables
 }

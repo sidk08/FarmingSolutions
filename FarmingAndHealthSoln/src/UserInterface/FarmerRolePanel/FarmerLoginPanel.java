@@ -58,9 +58,10 @@ public class FarmerLoginPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         btnsoilProfile = new javax.swing.JButton();
-        btnConsultDoctor = new javax.swing.JButton();
+        weatherBtn = new javax.swing.JButton();
         btnConsultAgricul = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btnConsultDoctor1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 153));
@@ -76,15 +77,15 @@ public class FarmerLoginPanel extends javax.swing.JPanel {
         });
         add(btnsoilProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 260, 530, 60));
 
-        btnConsultDoctor.setBackground(new java.awt.Color(0, 153, 153));
-        btnConsultDoctor.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
-        btnConsultDoctor.setText(" Consult Doctor");
-        btnConsultDoctor.addActionListener(new java.awt.event.ActionListener() {
+        weatherBtn.setBackground(new java.awt.Color(0, 153, 153));
+        weatherBtn.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
+        weatherBtn.setText("Weather Information");
+        weatherBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConsultDoctorActionPerformed(evt);
+                weatherBtnActionPerformed(evt);
             }
         });
-        add(btnConsultDoctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 530, 530, 60));
+        add(weatherBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 630, 530, 60));
 
         btnConsultAgricul.setBackground(new java.awt.Color(0, 153, 153));
         btnConsultAgricul.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
@@ -100,6 +101,16 @@ public class FarmerLoginPanel extends javax.swing.JPanel {
         jLabel1.setText("Farmer Panel");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 530, 70));
 
+        btnConsultDoctor1.setBackground(new java.awt.Color(0, 153, 153));
+        btnConsultDoctor1.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
+        btnConsultDoctor1.setText(" Consult Doctor");
+        btnConsultDoctor1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultDoctor1ActionPerformed(evt);
+            }
+        });
+        add(btnConsultDoctor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 530, 530, 60));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 1670, 1020));
     }// </editor-fold>//GEN-END:initComponents
@@ -114,15 +125,15 @@ public class FarmerLoginPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnsoilProfileActionPerformed
 
-    private void btnConsultDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultDoctorActionPerformed
+    private void weatherBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_weatherBtnActionPerformed
         // TODO add your handling code here:
         
-        FarmerDocRequestPanel docRequest = new FarmerDocRequestPanel(container, account, organization, enterprise, network, system);
-        container.add("FarmerDocRequestPanel", docRequest);
+        WeatherDetailsJPanel weatherPanel = new WeatherDetailsJPanel(container, account, organization, enterprise);
+        container.add("WeatherDetailsJPanel", weatherPanel);
         CardLayout layout = (CardLayout) container.getLayout();
         layout.next(container);
        
-    }//GEN-LAST:event_btnConsultDoctorActionPerformed
+    }//GEN-LAST:event_weatherBtnActionPerformed
 
     private void btnConsultAgriculActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultAgriculActionPerformed
         // TODO add your handling code here:
@@ -134,12 +145,17 @@ public class FarmerLoginPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnConsultAgriculActionPerformed
 
+    private void btnConsultDoctor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultDoctor1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConsultDoctor1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnConsultAgricul;
-    private javax.swing.JButton btnConsultDoctor;
+    private javax.swing.JButton btnConsultDoctor1;
     private javax.swing.JButton btnsoilProfile;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton weatherBtn;
     // End of variables declaration//GEN-END:variables
 }

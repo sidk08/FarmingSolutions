@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UserInterface.GovtRolePanel;
+package UserInterface.FarmerRolePanel;
+import Business.Enterprise.Enterprise;
+import Business.Organization.Organization;
+import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.net.URL;
 import java.io.BufferedReader;
@@ -28,12 +31,17 @@ public class WeatherDetailsJPanel extends javax.swing.JPanel {
      * Creates new form WeatherDetailsJPanel
      */
     private JPanel container;
-    public WeatherDetailsJPanel(JPanel container) throws ParseException { initComponents();
+    private Enterprise enterprise;
+    public WeatherDetailsJPanel(JPanel container, UserAccount account, Organization organization, Enterprise enterprise) { 
+        initComponents();
         this.container = container;
+        this.enterprise = enterprise;
         JSONObject json=null;
         try {
-
-		URL url = new URL("http://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22");
+                
+                String name = enterprise.getName();
+                String URL_string = "http://samples.openweathermap.org/data/2.5/weather?q="+name+",us&appid=b6907d289e10d714a6e88b30761fae22";
+		URL url = new URL(URL_string);
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod("GET");
 		conn.setRequestProperty("Accept", "application/json");
@@ -87,6 +95,10 @@ public class WeatherDetailsJPanel extends javax.swing.JPanel {
         txtfieldweather.setText(main);
         txtfielddesc.setText(desc);
     }
+
+//    public WeatherDetailsJPanel(JPanel container, UserAccount account, Organization organization, Enterprise enterprise) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -109,7 +121,7 @@ public class WeatherDetailsJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         weatheroutput.setText("Weather :");
-        jPanel1.add(weatheroutput, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 62, 25));
+        jPanel1.add(weatheroutput, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 80, 25));
 
         backBtn.setText("Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {

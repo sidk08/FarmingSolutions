@@ -36,10 +36,10 @@ public class AnalyseHealthDataJPanel extends javax.swing.JPanel {
     private int averagecount= 0;
     private int goodcount= 0;
     private int excellentcount = 0;
-    private int poorperc= 0;
-    private int averageperc= 0;
-    private int goodperc= 0;
-    private int excellentperc = 0;
+    private double poorperc= 0;
+    private double averageperc= 0;
+    private double goodperc= 0;
+    private double excellentperc = 0;
     
     public AnalyseHealthDataJPanel(JPanel container, EnterpriseDirectory er) {
         initComponents();
@@ -109,12 +109,19 @@ public class AnalyseHealthDataJPanel extends javax.swing.JPanel {
                     Farmer farmer = user.getPerson().getFarmer();
                     
                     int length = farmer.getHealthDataList().size();
-                    int index = length > 1 ? length-1 : 0;
-                    healthscore = farmer.getHealthDataList().get(index).getHealthScore();
-                    clearvalues();
-                    calculatePieData(healthscore);
+                    if(length > 0){
+                        healthscore = farmer.getHealthDataList().get(length-1).getHealthScore();
+//                        clearvalues();
+                        calculatePieData(healthscore);
+                    }
+                    else{
+//                        clearvalues();
+                    }
+                    
+
                 }
               draw_pie_chart();
+              clearvalues();
             }
 
     }//GEN-LAST:event_distComboBoxActionPerformed
@@ -184,10 +191,10 @@ public class AnalyseHealthDataJPanel extends javax.swing.JPanel {
         
           int total = poorcount + averagecount + goodcount + excellentcount;
           if(total!=0){
-          poorperc = (int)((poorcount/total) * 100);
-          averageperc = (int)((averagecount/total) * 100);
-          goodperc = (int)((goodcount/total) * 100);
-          excellentperc = (int)((excellentcount/total) * 100);
+          poorperc = (double)(((double)poorcount/(double)total) * 100);
+          averageperc = (double)(((double)averagecount/(double)total) * 100);
+          goodperc = (double)(((double)goodcount/(double)total) * 100);
+          excellentperc = (double)(((double)excellentcount/(double)total) * 100);
           }
           
     }

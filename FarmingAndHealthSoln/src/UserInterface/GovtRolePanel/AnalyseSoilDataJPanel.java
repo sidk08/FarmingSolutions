@@ -36,9 +36,9 @@ public class AnalyseSoilDataJPanel extends javax.swing.JPanel {
     private int averagecount = 0;
     private int goodcount = 0;
     private int excellentcount = 0;
-    private int poorperc = 0;
-    private int averageperc = 0;
-    private int goodperc = 0;
+    private double poorperc = 0;
+    private double averageperc = 0;
+    private double goodperc = 0;
     private int excellentperc = 0;
 
     public AnalyseSoilDataJPanel(JPanel container, EnterpriseDirectory edr) {
@@ -109,16 +109,14 @@ public class AnalyseSoilDataJPanel extends javax.swing.JPanel {
                     if (length > 0) {
 
                         this.soilScore = farmer.getSoilDataList().get(length - 1).getSoilScore();
-
-                        clearvalues();
                         calculatePieData(soilScore);
                     } else {
-                        //   this.soilScore = farmer.getSoilDataList().get(length).getSoilScore();
-                        clearvalues();
+
                     }
 
                 }
                 draw_pie_chart();
+                clearvalues();
             }
         }
 
@@ -169,11 +167,14 @@ public class AnalyseSoilDataJPanel extends javax.swing.JPanel {
         //   throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 
         int total = poorcount + averagecount + goodcount + excellentcount;
-
+double temp;
         if (total != 0) {
-            poorperc = (int) ((poorcount / total) * 100);
-            averageperc = (int) ((averagecount / total) * 100);
-            goodperc = (int) ((goodcount / total) * 100);
+            temp = (double)((double)poorcount / (double)total);
+            poorperc =  (temp * 100);
+            temp = (double)((double)averagecount / (double)total);
+            averageperc =  (temp * 100);
+            temp = (double)((double)goodcount / (double)total);
+            goodperc =  (temp * 100);
         }
 
     }

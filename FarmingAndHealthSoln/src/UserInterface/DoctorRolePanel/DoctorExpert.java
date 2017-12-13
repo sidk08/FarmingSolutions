@@ -83,12 +83,10 @@ public class DoctorExpert extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Cambria", 0, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Health Check anad Reports");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 550, 60));
 
         jLabel2.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Please Select famer and calculates its Health core as per symptoms given by Farmer");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 950, 40));
 
@@ -122,8 +120,9 @@ public class DoctorExpert extends javax.swing.JPanel {
         assignBtn.setText("Assign To Me");
         jPanel1.add(assignBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 830, 250, 60));
 
+        pic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
         pic.setText("jLabel3");
-        jPanel1.add(pic, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel1.add(pic, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1570, 970));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1610, 970));
     }// </editor-fold>//GEN-END:initComponents

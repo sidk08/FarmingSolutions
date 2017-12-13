@@ -162,7 +162,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         jLabel5.setForeground(new java.awt.Color(0, 153, 153));
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 2070, 1130));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 2190, 1210));
     }// </editor-fold>//GEN-END:initComponents
 
     private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed

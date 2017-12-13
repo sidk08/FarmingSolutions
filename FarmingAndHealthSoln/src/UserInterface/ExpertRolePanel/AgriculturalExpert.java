@@ -230,7 +230,7 @@ public class AgriculturalExpert extends javax.swing.JPanel {
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
         jLabel4.setText("jLabel4");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1550, 950));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1730, 1180));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSoilTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSoilTestActionPerformed

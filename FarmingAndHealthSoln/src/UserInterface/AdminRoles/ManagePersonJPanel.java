@@ -190,7 +190,7 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
         jLabel7.setText("jLabel7");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 1350, 890));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 1540, 1120));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addPersonJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPersonJButtonActionPerformed

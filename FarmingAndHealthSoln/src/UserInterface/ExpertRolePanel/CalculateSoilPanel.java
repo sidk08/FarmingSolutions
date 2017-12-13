@@ -60,16 +60,13 @@ private JPanel container;
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        lblSoilType = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         txtNitrogen = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
-        jSeparator5 = new javax.swing.JSeparator();
         jSeparator6 = new javax.swing.JSeparator();
         txtWaterContent = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
@@ -96,10 +93,6 @@ private JPanel container;
         jLabel1.setText("Check Soil Contents , Nutrient  ands its minerals :");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 780, 50));
 
-        jLabel2.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
-        jLabel2.setText("Soil Type : ");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 140, -1));
-
         jLabel3.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         jLabel3.setText("Nitrogen : ");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, -1, -1));
@@ -107,10 +100,6 @@ private JPanel container;
         jLabel4.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         jLabel4.setText("Phosphorous :");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, -1, -1));
-
-        lblSoilType.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
-        lblSoilType.setForeground(new java.awt.Color(51, 51, 51));
-        add(lblSoilType, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 80, 590, 50));
 
         jLabel8.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         jLabel8.setText("Potassium :");
@@ -127,7 +116,6 @@ private JPanel container;
         add(txtNitrogen, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 170, 590, 50));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 380, 590, 10));
         add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 300, 590, 10));
-        add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, 590, 10));
         add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 220, 590, 10));
 
         txtWaterContent.setBackground(new java.awt.Color(240, 240, 240));
@@ -234,7 +222,7 @@ private JPanel container;
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 2090, 940));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 2170, 1050));
     }// </editor-fold>//GEN-END:initComponents
     
     private void txtDescripationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescripationActionPerformed
@@ -390,7 +378,6 @@ if (Double.parseDouble(this.txtNitrogen.getText()) > 20.0) {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -400,11 +387,9 @@ if (Double.parseDouble(this.txtNitrogen.getText()) > 20.0) {
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
-    private javax.swing.JLabel lblSoilType;
     private javax.swing.JTextField txtDescripation;
     private javax.swing.JTextField txtNitrogen;
     private javax.swing.JTextField txtPHVale;

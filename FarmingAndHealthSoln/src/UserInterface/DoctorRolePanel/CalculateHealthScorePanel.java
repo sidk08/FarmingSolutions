@@ -186,7 +186,7 @@ public class CalculateHealthScorePanel extends javax.swing.JPanel {
                 bphighTxtActionPerformed(evt);
             }
         });
-        add(bphighTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 110, 130, 30));
+        add(bphighTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 110, 140, 30));
 
         sugarTxt.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         sugarTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -194,7 +194,7 @@ public class CalculateHealthScorePanel extends javax.swing.JPanel {
                 sugarTxtActionPerformed(evt);
             }
         });
-        add(sugarTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 150, 560, 50));
+        add(sugarTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 150, 590, 50));
 
         bpLowTxt2.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         bpLowTxt2.addActionListener(new java.awt.event.ActionListener() {
@@ -210,11 +210,11 @@ public class CalculateHealthScorePanel extends javax.swing.JPanel {
                 weightTxt1ActionPerformed(evt);
             }
         });
-        add(weightTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 220, 570, 50));
+        add(weightTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 220, 590, 50));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
         jLabel5.setText("in ");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 2010, 940));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 2110, 1020));
     }// </editor-fold>//GEN-END:initComponents
 
     private void descrTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descrTxtActionPerformed

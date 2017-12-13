@@ -105,7 +105,7 @@ public class FarmerDocRequestPanel extends javax.swing.JPanel {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 830, 260, 60));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 830, 210, 50));
 
         messageTxt.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         add(messageTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 640, 600, 90));
@@ -124,10 +124,10 @@ public class FarmerDocRequestPanel extends javax.swing.JPanel {
                 sendReqBtnActionPerformed(evt);
             }
         });
-        add(sendReqBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 840, 260, 60));
+        add(sendReqBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 840, 250, 50));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1410, 930));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1520, 1100));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed

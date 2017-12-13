@@ -55,6 +55,7 @@ public class MessageJPanel extends javax.swing.JPanel {
         messageTxt = new javax.swing.JTextArea();
         sendMsgBtn = new javax.swing.JButton();
         backBtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         jPanel1.setMinimumSize(new java.awt.Dimension(1530, 770));
         jPanel1.setName(""); // NOI18N
@@ -96,7 +97,7 @@ public class MessageJPanel extends javax.swing.JPanel {
         messageTxt.setRows(5);
         jScrollPane2.setViewportView(messageTxt);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 460, 435, 60));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 460, 435, 50));
 
         sendMsgBtn.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         sendMsgBtn.setText("Send Message");
@@ -105,7 +106,7 @@ public class MessageJPanel extends javax.swing.JPanel {
                 sendMsgBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(sendMsgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 460, -1, 60));
+        jPanel1.add(sendMsgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 460, -1, 40));
 
         backBtn.setBackground(new java.awt.Color(0, 153, 153));
         backBtn.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
@@ -116,7 +117,11 @@ public class MessageJPanel extends javax.swing.JPanel {
                 backBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 470, 110, 50));
+        jPanel1.add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 470, 110, 40));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1580, 940));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -128,9 +133,9 @@ public class MessageJPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 762, Short.MAX_VALUE)
+            .addGap(0, 940, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 762, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -192,6 +197,7 @@ public class MessageJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBtn;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

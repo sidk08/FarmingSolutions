@@ -101,7 +101,7 @@ public class FarmerLoginPanel extends javax.swing.JPanel {
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 530, 70));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 1570, 840));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 1670, 1020));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnsoilProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsoilProfileActionPerformed

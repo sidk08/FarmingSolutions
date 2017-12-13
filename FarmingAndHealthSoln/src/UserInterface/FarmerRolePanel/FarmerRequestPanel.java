@@ -70,7 +70,6 @@ public class FarmerRequestPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Cambria", 0, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Consultation to Expert");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 550, 60));
 
@@ -89,7 +88,6 @@ public class FarmerRequestPanel extends javax.swing.JPanel {
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 1270, -1));
 
         jLabel2.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Work Request History:");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 830, 40));
 
@@ -102,13 +100,12 @@ public class FarmerRequestPanel extends javax.swing.JPanel {
                 requestBtnActionPerformed(evt);
             }
         });
-        add(requestBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 830, 260, 60));
+        add(requestBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 830, 200, 50));
 
         txtMessaage.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         add(txtMessaage, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 640, 730, 90));
 
         jLabel3.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Please  enter the information which you wanted to request");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 590, 620, 40));
 
@@ -121,10 +118,10 @@ public class FarmerRequestPanel extends javax.swing.JPanel {
                 btnSendRequestActionPerformed(evt);
             }
         });
-        add(btnSendRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 840, 260, 60));
+        add(btnSendRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 810, 200, 50));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1560, 930));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1700, 1020));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSendRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendRequestActionPerformed

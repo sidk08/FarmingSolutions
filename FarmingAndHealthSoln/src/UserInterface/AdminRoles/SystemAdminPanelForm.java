@@ -91,7 +91,7 @@ public class SystemAdminPanelForm extends javax.swing.JPanel {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 1580, 820));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -4, 1710, 930));
     }// </editor-fold>//GEN-END:initComponents
     private void manageAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageAdminActionPerformed
         // TODO add your handling code here:

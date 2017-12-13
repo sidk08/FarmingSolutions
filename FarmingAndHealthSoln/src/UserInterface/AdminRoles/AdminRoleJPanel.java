@@ -95,7 +95,7 @@ public class AdminRoleJPanel extends javax.swing.JPanel {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
         jLabel3.setText("jLabel3");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 780));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1580, 1170));
     }// </editor-fold>//GEN-END:initComponents
 
     private void mngUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mngUserBtnActionPerformed

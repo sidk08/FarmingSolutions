@@ -147,12 +147,15 @@ public class FarmerDetailsInformationJPanel extends javax.swing.JPanel {
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, -1, -1));
 
         lblFirstName.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
+        lblFirstName.setOpaque(true);
         add(lblFirstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 80, 590, 50));
 
         lblSsn.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
+        lblSsn.setOpaque(true);
         add(lblSsn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 200, 590, 50));
 
         lblLastName.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
+        lblLastName.setOpaque(true);
         add(lblLastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 140, 590, 50));
 
         jLabel9.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
@@ -225,7 +228,7 @@ public class FarmerDetailsInformationJPanel extends javax.swing.JPanel {
                 btnSubmitActionPerformed(evt);
             }
         });
-        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 810, 220, 60));
+        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 810, 190, 50));
 
         btnBack.setBackground(new java.awt.Color(0, 153, 153));
         btnBack.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
@@ -235,7 +238,7 @@ public class FarmerDetailsInformationJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 820, 130, 50));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 820, 130, 40));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");

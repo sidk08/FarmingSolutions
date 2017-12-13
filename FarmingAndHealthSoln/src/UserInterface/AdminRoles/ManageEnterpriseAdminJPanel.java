@@ -219,7 +219,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jLabel8.setMinimumSize(new java.awt.Dimension(634, 43));
         jLabel8.setPreferredSize(new java.awt.Dimension(634, 43));
         add(jLabel8);
-        jLabel8.setBounds(0, -10, 1930, 1170);
+        jLabel8.setBounds(0, -10, 2030, 1230);
     }// </editor-fold>//GEN-END:initComponents
 
     private void networkJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkJComboBoxActionPerformed

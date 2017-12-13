@@ -29,6 +29,10 @@ private JPanel container;
     private WorkRequest  workrequest; 
     AgriculturalExpert agriExpert;
     //private SoilData soildata;
+    private Double nitrogenContent;
+    private Double phosphorous;
+   private Double waterContent;
+   private Double pottassimContent;
     
      CalculateSoilPanel(JPanel container, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem system, WorkRequest request) {
        
@@ -39,7 +43,10 @@ private JPanel container;
         this.system = system;
         this.farmerorganisation = organization;
         this.workrequest = request;
-       
+       this.nitrogenContent = 0.0;
+      this.phosphorous = 0.0;
+      this.waterContent =  0.0;
+      this.pottassimContent = 0.0;
        
        //this.lblSoilType.setText(account.getPerson().getFarmer().addSoilData());
    //his.soildata = this.account.getPerson().getFarmer().addSoilData();   
@@ -77,6 +84,9 @@ private JPanel container;
         btnSoilScore = new javax.swing.JButton();
         btnSendFeedback = new javax.swing.JButton();
         txtPhosporous = new javax.swing.JTextField();
+        jSeparator9 = new javax.swing.JSeparator();
+        txtsoilscore = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 153));
@@ -188,7 +198,7 @@ private JPanel container;
                 btnSoilScoreActionPerformed(evt);
             }
         });
-        add(btnSoilScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 610, 370, 70));
+        add(btnSoilScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 720, 370, 70));
 
         btnSendFeedback.setBackground(new java.awt.Color(0, 153, 153));
         btnSendFeedback.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
@@ -210,6 +220,17 @@ private JPanel container;
             }
         });
         add(txtPhosporous, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 250, 590, 50));
+        add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 650, 600, 10));
+
+        txtsoilscore.setBackground(new java.awt.Color(240, 240, 240));
+        txtsoilscore.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
+        txtsoilscore.setForeground(new java.awt.Color(51, 51, 51));
+        txtsoilscore.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        add(txtsoilscore, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 600, 590, 50));
+
+        jLabel13.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
+        jLabel13.setText("Soil Score :");
+        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 590, 230, 60));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -249,19 +270,44 @@ private JPanel container;
             }
             else {
 
-        SoilData soildata = account.getPerson().getFarmer().addSoilData();
-        //soildata.setCropPlanted(this.txt.getText());
-        
-        soildata.setNitroValue(Double.parseDouble(this.txtNitrogen.getText()));
-        soildata.setPhosphorValue(Double.parseDouble(this.txtPhosporous.getText()));
-        soildata.setPotassiumValue(Double.parseDouble(this.txtPotassim.getText()));
-        soildata.setWaterValue(Double.parseDouble(this.txtPHVale.getText()));
+if (Double.parseDouble(this.txtNitrogen.getText()) > 20.0) {
+           nitrogenContent = 0.4;
+           
+       }else  if ((Double.parseDouble(this.txtNitrogen.getText()) > 20.0 ) && (Double.parseDouble(this.txtNitrogen.getText()) < 60.0 )) {
+      nitrogenContent = 0.6;
+       }else {
+           nitrogenContent = 0.9;
+       }
        
-        
-        
-          CalculateRandomNumber();
-                //JOptionPane.showMessageDialog(null, "Information saved Success Fully");
-
+        if (Double.parseDouble(this.txtPhosporous.getText()) > 20.0) {
+           phosphorous = 0.5;
+           
+       }else  if ((Double.parseDouble(this.txtPhosporous.getText()) > 20.0 ) && (Double.parseDouble(this.txtPhosporous.getText()) < 60.0 )) {
+      phosphorous = 0.7;
+       }else {
+           phosphorous = 0.8;
+       }
+       
+        if (Double.parseDouble(this.txtWaterContent.getText()) > 20.0) {
+           waterContent = 0.1;
+           
+       }else  if ((Double.parseDouble(this.txtWaterContent.getText()) > 20.0 ) && (Double.parseDouble(this.txtWaterContent.getText()) < 60.0 )) {
+      waterContent = 0.2;
+       }else{
+           waterContent = 0.4;
+       }
+       
+       
+        if (Double.parseDouble(this.txtPotassim.getText()) > 20.0) {
+           pottassimContent = 0.25;
+           
+       }else  if ((Double.parseDouble(this.txtPotassim.getText()) > 20.0 ) && (Double.parseDouble(this.txtPotassim.getText()) < 60.0 )) {
+      pottassimContent = 0.5;
+       }else {
+           pottassimContent = 0.5;
+       }
+       
+        CalculateRandomNumber(nitrogenContent,phosphorous,waterContent,pottassimContent);
             }
 
         } catch (Exception e) {
@@ -271,13 +317,6 @@ private JPanel container;
         
         
     }//GEN-LAST:event_btnSoilScoreActionPerformed
- public void CalculateRandomNumber(){
-     
-     float random = (float) (Math.random() * 10.0 + 0.0);
-    this.txtPHVale.setText(String.valueOf(random));
-    
-  
- }
     
     private void txtPotassimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPotassimActionPerformed
         // TODO add your handling code here:
@@ -296,10 +335,19 @@ private JPanel container;
         }
         
         workrequest.setStatus("Completed");
-        workrequest.setResponse(this.txtPHVale.getText() + this.txtDescripation.getText());
+        workrequest.setResponse(this.txtDescripation.getText());
         
+        SoilData soildata = new SoilData();
         
-        account.getPerson().getFarmer().getSoilDataList().get(0).setIsSoilScore(this.txtPHVale.getText());
+        //soildata.setCropPlanted(this.txt.getText());
+        
+        soildata.setNitroValue(Double.parseDouble(this.txtNitrogen.getText()));
+        soildata.setPhosphorValue(Double.parseDouble(this.txtPhosporous.getText()));
+        soildata.setPotassiumValue(Double.parseDouble(this.txtPotassim.getText()));
+        soildata.setWaterValue(Double.parseDouble(this.txtPHVale.getText()));
+        soildata.setSoilScore(Double.parseDouble(txtsoilscore.getText()));
+        workrequest.getSender().getPerson().getFarmer().getSoilDataList().add(soildata);
+//        account.getPerson().getFarmer().getSoilDataList().get(0).setIsSoilScore(this.txtPHVale.getText());
 
 
 //         AgriculturalExpert manageEnterpriseAdminJPanel = new AgriculturalExpert(container,account,farmerorganisation, enterprise ,system);
@@ -320,7 +368,19 @@ private JPanel container;
         CardLayout layout = (CardLayout) container.getLayout();
         layout.previous(container);
     }//GEN-LAST:event_jButton2ActionPerformed
+    
+    public void CalculateRandomNumber(Double nitrogenContent1, Double phosphorous1, Double waterContent1, Double pottassimContent1){
    
+    float random1 =(float) (30.0 * waterContent1 + 20.0 * phosphorous1 + 20.0 * nitrogenContent1 + 30.0 * pottassimContent1);
+   
+   float random2 = (float) (random1 / 6.0);
+   
+    float random = (float) (Math.random() * 10.0 + 0.0);
+   this.txtsoilscore.setText(String.valueOf(random2));
+   
+ 
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSendFeedback;
@@ -329,6 +389,7 @@ private JPanel container;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -342,6 +403,7 @@ private JPanel container;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JSeparator jSeparator9;
     private javax.swing.JLabel lblSoilType;
     private javax.swing.JTextField txtDescripation;
     private javax.swing.JTextField txtNitrogen;
@@ -349,6 +411,7 @@ private JPanel container;
     private javax.swing.JTextField txtPhosporous;
     private javax.swing.JTextField txtPotassim;
     private javax.swing.JTextField txtWaterContent;
+    private javax.swing.JTextField txtsoilscore;
     // End of variables declaration//GEN-END:variables
 }
 

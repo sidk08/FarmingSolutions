@@ -59,7 +59,6 @@ public class FarmerLoginPanel extends javax.swing.JPanel {
 
         btnsoilProfile = new javax.swing.JButton();
         btnConsultDoctor = new javax.swing.JButton();
-        btnhealthProfile = new javax.swing.JButton();
         btnConsultAgricul = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -87,17 +86,6 @@ public class FarmerLoginPanel extends javax.swing.JPanel {
         });
         add(btnConsultDoctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 530, 530, 60));
 
-        btnhealthProfile.setBackground(new java.awt.Color(0, 153, 153));
-        btnhealthProfile.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
-        btnhealthProfile.setText("Health Profile");
-        btnhealthProfile.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        btnhealthProfile.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnhealthProfileActionPerformed(evt);
-            }
-        });
-        add(btnhealthProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 350, 530, 60));
-
         btnConsultAgricul.setBackground(new java.awt.Color(0, 153, 153));
         btnConsultAgricul.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         btnConsultAgricul.setText("Consult  Agricultural Expert");
@@ -106,7 +94,7 @@ public class FarmerLoginPanel extends javax.swing.JPanel {
                 btnConsultAgriculActionPerformed(evt);
             }
         });
-        add(btnConsultAgricul, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 440, 530, 60));
+        add(btnConsultAgricul, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 400, 530, 60));
 
         jLabel1.setFont(new java.awt.Font("Cambria", 0, 36)); // NOI18N
         jLabel1.setText("Farmer Panel");
@@ -136,11 +124,6 @@ public class FarmerLoginPanel extends javax.swing.JPanel {
        
     }//GEN-LAST:event_btnConsultDoctorActionPerformed
 
-    private void btnhealthProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnhealthProfileActionPerformed
-        // TODO add your handling code here:
-       
-    }//GEN-LAST:event_btnhealthProfileActionPerformed
-
     private void btnConsultAgriculActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultAgriculActionPerformed
         // TODO add your handling code here:
          FarmerRequestPanel manageEnterpriseAdminJPanel = new FarmerRequestPanel(container,account,organization,enterprise,system,farmer);
@@ -155,7 +138,6 @@ public class FarmerLoginPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnConsultAgricul;
     private javax.swing.JButton btnConsultDoctor;
-    private javax.swing.JButton btnhealthProfile;
     private javax.swing.JButton btnsoilProfile;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

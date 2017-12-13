@@ -56,7 +56,7 @@ public class AgriculturalExpert extends javax.swing.JPanel {
         model.setRowCount(0);
 
         //   organization1.getWorkQueue().getWorkRequestList()
-        Object[] row = new Object[7];
+        Object[] row = new Object[6];
 
         for (Organization organization1 : enterprise.getOrganizationDirectory().getOrganizationList()) {
             if (organization1 instanceof FarmerOrganization) {
@@ -65,9 +65,9 @@ public class AgriculturalExpert extends javax.swing.JPanel {
             }
         }
 
-        if (this
-       .farmerorganisation.getWorkQueue().getWorkRequestList() != null) {
+        if (this.farmerorganisation.getWorkQueue().getWorkRequestList() != null) {
             System.out.println("if work null");
+
             for (WorkRequest request : organization.getWorkQueue().getWorkRequestList()) {
 
                 System.out.println("if work queue isnot null");
@@ -79,20 +79,21 @@ public class AgriculturalExpert extends javax.swing.JPanel {
                 row[1] = request.getSender().getPerson().getLastName();
                 row[2] = request.getSender().getPerson().getSSN();
 
-                row[5] = request.getMessage();
+                row[4] = request.getMessage();
 
                 String result = request.getStatus();
                 //  row[4] = account.getPerson().getFarmer().getSoilDataList().get(0).getIsSoilScore();
                 //row[4] = "...........";
-                if (account.getPerson().getFarmer().getSoilDataList().size() == 0) {
-                    row[4] = "........";
-                } else {
-                    // row[4] = account.getPerson().getFarmer().getSoilDataList().get(0).getIsSoilScore();
-                }
+//                if (account.getPerson().getFarmer().getSoilDataList().size() == 0) {
+//                    row[4] = "........";
+//                } else {
+//                    // row[4] = account.getPerson().getFarmer().getSoilDataList().get(0).getIsSoilScore();
+//                }
+                 
 
                 row[3] = request;
 
-                row[6] = request.getResponse();
+                row[5] = request.getResponse();
                 //result == null ? "Waiting" : result;
 
                 model.addRow(row);
@@ -168,7 +169,6 @@ public class AgriculturalExpert extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         farmerTable = new javax.swing.JTable();
-        btnViewDetails = new javax.swing.JButton();
         btnSoilTest = new javax.swing.JButton();
         btnAssign = new javax.swing.JButton();
         btnrefresh = new javax.swing.JButton();
@@ -198,16 +198,6 @@ public class AgriculturalExpert extends javax.swing.JPanel {
         jScrollPane1.setViewportView(farmerTable);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 1410, 410));
-
-        btnViewDetails.setBackground(new java.awt.Color(0, 153, 153));
-        btnViewDetails.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
-        btnViewDetails.setText("View Details");
-        btnViewDetails.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewDetailsActionPerformed(evt);
-            }
-        });
-        add(btnViewDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 830, 260, 60));
 
         btnSoilTest.setBackground(new java.awt.Color(0, 153, 153));
         btnSoilTest.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
@@ -242,23 +232,6 @@ public class AgriculturalExpert extends javax.swing.JPanel {
         jLabel4.setText("jLabel4");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1550, 950));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnViewDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDetailsActionPerformed
-        // TODO add your handling code here:
-        int selectedRow = farmerTable.getSelectedRow();
-
-        if (selectedRow >= 0) {
-
-            FarmerDetailsInformationJPanel manageEnterpriseAdminJPanel = new FarmerDetailsInformationJPanel(container, account, organization, enterprise, system);
-            container.add("FarmerDetailsInformationJPanel", manageEnterpriseAdminJPanel);
-            CardLayout layout = (CardLayout) container.getLayout();
-            layout.next(container);
-
-        } else {
-            JOptionPane.showMessageDialog(null, "Choose a reuest to view details.");
-            return;
-        }
-    }//GEN-LAST:event_btnViewDetailsActionPerformed
 
     private void btnSoilTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSoilTestActionPerformed
         // TODO add your handling code here:
@@ -326,7 +299,6 @@ public class AgriculturalExpert extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAssign;
     private javax.swing.JButton btnSoilTest;
-    private javax.swing.JButton btnViewDetails;
     private javax.swing.JButton btnrefresh;
     private javax.swing.JTable farmerTable;
     private javax.swing.JLabel jLabel1;

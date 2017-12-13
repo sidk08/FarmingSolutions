@@ -85,8 +85,7 @@ public class HealthData {
     }
     
     public void calculateHealthScore(){
-        float random = (float) (Math.random() * 15.0 + 30.0);
-        
+        float random = (float) ((Math.random() * 25.0) + 15.0);
         this.healthScore = (double) random;
     }
     

@@ -106,10 +106,7 @@ public class FarmerDetailsInformationJPanel extends javax.swing.JPanel {
         lblFirstName = new javax.swing.JLabel();
         lblSsn = new javax.swing.JLabel();
         lblLastName = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jSeparator1 = new javax.swing.JSeparator();
         cbtypeofLand = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
         txtCropPlanted = new javax.swing.JTextField();
@@ -125,7 +122,6 @@ public class FarmerDetailsInformationJPanel extends javax.swing.JPanel {
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator6 = new javax.swing.JSeparator();
-        soilScoreSeparator = new javax.swing.JSeparator();
         btnSubmit = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
@@ -159,32 +155,17 @@ public class FarmerDetailsInformationJPanel extends javax.swing.JPanel {
         lblLastName.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         add(lblLastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 140, 590, 50));
 
-        jLabel8.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
-        jLabel8.setText("Age :");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 290, -1, -1));
-
         jLabel9.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         jLabel9.setText("Type Of Land : ");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, -1, -1));
-
-        jTextField1.setBackground(new java.awt.Color(240, 240, 240));
-        jTextField1.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
-        jTextField1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 260, 590, 50));
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 310, 590, 10));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 300, -1, -1));
 
         cbtypeofLand.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         cbtypeofLand.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arable Land", "Permanent CropLand", "Grasslands" }));
-        add(cbtypeofLand, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 350, 580, 50));
+        add(cbtypeofLand, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 280, 580, 50));
 
         jLabel10.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         jLabel10.setText("Crop Planted : ");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, -1, -1));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 390, -1, -1));
 
         txtCropPlanted.setBackground(new java.awt.Color(240, 240, 240));
         txtCropPlanted.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
@@ -194,30 +175,30 @@ public class FarmerDetailsInformationJPanel extends javax.swing.JPanel {
                 txtCropPlantedActionPerformed(evt);
             }
         });
-        add(txtCropPlanted, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 440, 590, 50));
-        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 490, 580, 10));
+        add(txtCropPlanted, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 370, 590, 50));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 510, 580, 10));
 
         jLabel11.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         jLabel11.setText("Fertiliser Type : ");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 530, -1, -1));
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, -1, -1));
 
         cbFertiliserType.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         cbFertiliserType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Organic", "Inorganic" }));
-        add(cbFertiliserType, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 520, 590, 50));
+        add(cbFertiliserType, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 450, 590, 50));
 
         jLabel12.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         jLabel12.setText("Technology Used If : ");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 610, -1, -1));
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 540, -1, -1));
 
         txtTechinology.setBackground(new java.awt.Color(240, 240, 240));
         txtTechinology.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         txtTechinology.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        add(txtTechinology, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 610, 590, 40));
-        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 650, 590, 10));
+        add(txtTechinology, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 540, 590, 40));
+        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 420, 590, 10));
 
         jLabel13.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         jLabel13.setText("Soil Score if Calculated : ");
-        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 699, -1, 40));
+        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 630, -1, 40));
 
         cbSoilScore.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         cbSoilScore.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "NO", "YES" }));
@@ -226,15 +207,13 @@ public class FarmerDetailsInformationJPanel extends javax.swing.JPanel {
                 cbSoilScoreActionPerformed(evt);
             }
         });
-        add(cbSoilScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 700, 220, 40));
+        add(cbSoilScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 630, 220, 40));
 
         txtsoilScore.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
-        txtsoilScore.setText("2.5");
-        add(txtsoilScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 690, 280, 40));
+        add(txtsoilScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 680, 280, 40));
         add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 250, 590, 10));
         add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 130, 590, 10));
         add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 190, 590, 10));
-        add(soilScoreSeparator, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 732, 170, 10));
 
         btnSubmit.setBackground(new java.awt.Color(0, 153, 153));
         btnSubmit.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
@@ -246,7 +225,7 @@ public class FarmerDetailsInformationJPanel extends javax.swing.JPanel {
                 btnSubmitActionPerformed(evt);
             }
         });
-        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 810, 220, 40));
+        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 810, 220, 60));
 
         btnBack.setBackground(new java.awt.Color(0, 153, 153));
         btnBack.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
@@ -307,10 +286,6 @@ public class FarmerDetailsInformationJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnSubmitActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void cbSoilScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSoilScoreActionPerformed
         // TODO add your handling code here:
         if (this.cbSoilScore.getSelectedItem().toString() == "NO"){
@@ -347,19 +322,15 @@ public class FarmerDetailsInformationJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lblFirstName;
     private javax.swing.JLabel lblLastName;
     private javax.swing.JLabel lblSsn;
-    private javax.swing.JSeparator soilScoreSeparator;
     private javax.swing.JTextField txtCropPlanted;
     private javax.swing.JTextField txtTechinology;
     private javax.swing.JLabel txtsoilScore;

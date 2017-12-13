@@ -26,7 +26,7 @@ public class SoilData {
     private String technologyUsed;
     private double monthlyincome;
     
-    private float soilScore;
+    private double soilScore;
     
     public SoilData(){
         date = new Date();
@@ -120,14 +120,18 @@ public class SoilData {
         this.acidity = acidity;
     }
 
-    public float getSoilScore() {
+    public double getSoilScore() {
         return soilScore;
     }
     
     public void calculateSoilScore(){
-//        soilScore = (float) 7.8;
+        soilScore = (double)(Math.random() * 10.0 + 0.0);
     }   
 
+    public void setSoilScore(double soilScore) {
+        this.soilScore = soilScore;
+    }
+    
     public Date getDate() {
         return date;
     }

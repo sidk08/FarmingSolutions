@@ -17,8 +17,8 @@ public class Farmer {
     private ArrayList<HealthData> healthDataList;
 
     public Farmer() {
-        soilDataList = new ArrayList<>();
-        healthDataList = new ArrayList<>();
+        soilDataList = new ArrayList<SoilData>();
+        healthDataList = new ArrayList<HealthData>();
     }
 
     public ArrayList<HealthData> getHealthDataList() {

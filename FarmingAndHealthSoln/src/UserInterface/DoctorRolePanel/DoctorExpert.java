@@ -74,7 +74,6 @@ public class DoctorExpert extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         requestTable = new javax.swing.JTable();
-        viewDetailsBtn = new javax.swing.JButton();
         healthCheckBtn = new javax.swing.JButton();
         assignBtn = new javax.swing.JButton();
         pic = new javax.swing.JLabel();
@@ -106,17 +105,6 @@ public class DoctorExpert extends javax.swing.JPanel {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 1240, 410));
 
-        viewDetailsBtn.setBackground(new java.awt.Color(0, 153, 153));
-        viewDetailsBtn.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
-        viewDetailsBtn.setForeground(new java.awt.Color(255, 255, 255));
-        viewDetailsBtn.setText("View Details");
-        viewDetailsBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewDetailsBtnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(viewDetailsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 830, 260, 60));
-
         healthCheckBtn.setBackground(new java.awt.Color(0, 153, 153));
         healthCheckBtn.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
         healthCheckBtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -139,11 +127,6 @@ public class DoctorExpert extends javax.swing.JPanel {
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1610, 970));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void viewDetailsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewDetailsBtnActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_viewDetailsBtnActionPerformed
 
     private void healthCheckBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_healthCheckBtnActionPerformed
         // TODO add your handling code here:
@@ -178,7 +161,6 @@ public class DoctorExpert extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel pic;
     private javax.swing.JTable requestTable;
-    private javax.swing.JButton viewDetailsBtn;
     // End of variables declaration//GEN-END:variables
 
     public void populateTable() {
@@ -186,6 +168,8 @@ public class DoctorExpert extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) requestTable.getModel();
         model.setRowCount(0);
         Object[] row = new Object[6];
+        
+//        organization.getWorkQueue().getWorkRequestList().remove(1);
         
        Iterator<WorkRequest> it = organization.getWorkQueue().getWorkRequestList().iterator(); 
         while(it.hasNext()) {

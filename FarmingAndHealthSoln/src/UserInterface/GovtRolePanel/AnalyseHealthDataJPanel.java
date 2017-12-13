@@ -5,6 +5,21 @@
  */
 package UserInterface.GovtRolePanel;
 
+import Business.Enterprise.DistrictEnterprise;
+import Business.Enterprise.Enterprise;
+import Business.Enterprise.EnterpriseDirectory;
+import Business.FarmerData.Farmer;
+import Business.Organization.FarmerOrganization;
+import Business.Organization.Organization;
+import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PiePlot;
+import org.jfree.data.general.DefaultPieDataset;
+
 /**
  *
  * @author Aastha
@@ -14,8 +29,24 @@ public class AnalyseHealthDataJPanel extends javax.swing.JPanel {
     /**
      * Creates new form AnalyseSoilDataJPanel
      */
-    public AnalyseHealthDataJPanel() {
+    private JPanel container;
+    private EnterpriseDirectory er;
+    private double healthscore = 0;
+    private int poorcount= 0;
+    private int averagecount= 0;
+    private int goodcount= 0;
+    private int excellentcount = 0;
+    private int poorperc= 0;
+    private int averageperc= 0;
+    private int goodperc= 0;
+    private int excellentperc = 0;
+    
+    public AnalyseHealthDataJPanel(JPanel container, EnterpriseDirectory er) {
         initComponents();
+        
+        this.container = container;
+        this.er = er;
+        populateComboBox();
     }
 
     /**
@@ -27,14 +58,40 @@ public class AnalyseHealthDataJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
+        distComboBox = new javax.swing.JComboBox();
+        pieChartPanel = new javax.swing.JPanel();
+        backBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setLayout(null);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(jComboBox1);
-        jComboBox1.setBounds(460, 180, 270, 30);
+        jLabel3.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
+        jLabel3.setText("Select District/City :");
+        add(jLabel3);
+        jLabel3.setBounds(400, 80, 208, 29);
+
+        distComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                distComboBoxActionPerformed(evt);
+            }
+        });
+        add(distComboBox);
+        distComboBox.setBounds(630, 80, 230, 26);
+        add(pieChartPanel);
+        pieChartPanel.setBounds(330, 190, 570, 410);
+
+        backBtn.setBackground(new java.awt.Color(0, 153, 153));
+        backBtn.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
+        backBtn.setForeground(new java.awt.Color(255, 255, 255));
+        backBtn.setText("Back");
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtnActionPerformed(evt);
+            }
+        });
+        add(backBtn);
+        backBtn.setBounds(100, 680, 140, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -42,9 +99,117 @@ public class AnalyseHealthDataJPanel extends javax.swing.JPanel {
         jLabel1.setBounds(1, 0, 1530, 770);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void distComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_distComboBoxActionPerformed
+        // TODO add your handling code here:
+        DistrictEnterprise distent = (DistrictEnterprise) distComboBox.getSelectedItem();
+            
+        for(Organization org : distent.getOrganizationDirectory().getOrganizationList())
+            if(org instanceof FarmerOrganization){
+                for(UserAccount user : org.getUserAccountDirectory().getUserAccountList()){
+                    Farmer farmer = user.getPerson().getFarmer();
+                    
+                    int length = farmer.getHealthDataList().size();
+                    int index = length > 1 ? length-1 : 0;
+                    healthscore = farmer.getHealthDataList().get(index).getHealthScore();
+                    clearvalues();
+                    calculatePieData(healthscore);
+                }
+              draw_pie_chart();
+            }
+
+    }//GEN-LAST:event_distComboBoxActionPerformed
+
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
+        // TODO add your handling code here:
+        container.remove(this);
+        CardLayout layout = (CardLayout) container.getLayout();
+        layout.previous(container);
+    }//GEN-LAST:event_backBtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton backBtn;
+    private javax.swing.JComboBox distComboBox;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel pieChartPanel;
     // End of variables declaration//GEN-END:variables
+
+    private void draw_pie_chart() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      calculatePercentage();
+      DefaultPieDataset dataset = new DefaultPieDataset( );
+      dataset.setValue( "Poor" , poorperc );  
+      dataset.setValue( "Average" , averageperc );   
+      dataset.setValue( "Good" , goodperc );    
+      dataset.setValue( "Excellent" , excellentperc ); 
+      
+       JFreeChart chart = ChartFactory.createPieChart(      
+         "Heath Score",   // chart title 
+         dataset,          // data    
+         false,             // do not include legend   
+         true, 
+         false);
+       
+       PiePlot plot = (PiePlot) chart.getPlot();
+       
+       pieChartPanel.removeAll();
+       ChartPanel chartPanel = new ChartPanel(chart);
+       
+       pieChartPanel.add(chartPanel);
+       pieChartPanel.validate();
+       pieChartPanel.setOpaque(false);
+    }
+
+    private void calculatePieData(double healthscore) {
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
+       if(healthscore >= 15.0 && healthscore < 20.0){
+          poorcount++; 
+       }
+       else if(healthscore >= 20.0 && healthscore < 25.0){
+           averagecount++;
+       }
+       else if(healthscore >= 25.0 && healthscore < 30.0){
+           goodcount++;
+       }
+       else if(healthscore >= 30.0 && healthscore <= 40.0){
+           excellentcount++;
+       }
+      
+    }
+
+    private void calculatePercentage() {
+     //   throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+          int total = poorcount + averagecount + goodcount + excellentcount;
+          if(total!=0){
+          poorperc = (int)((poorcount/total) * 100);
+          averageperc = (int)((averagecount/total) * 100);
+          goodperc = (int)((goodcount/total) * 100);
+          excellentperc = (int)((excellentcount/total) * 100);
+          }
+          
+    }
+
+    private void populateComboBox() {
+     //   throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for(Enterprise ent : er.getEnterpriseList()){
+           if(ent instanceof DistrictEnterprise){
+               distComboBox.addItem((DistrictEnterprise)ent);
+           } 
+        }
+    }
+
+    private void clearvalues() {
+      //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      poorcount=0;
+      poorperc=0;
+      averagecount=0;
+      averageperc=0;
+      goodcount=0;
+      goodperc=0;
+      excellentcount=0;
+      excellentperc=0;
+    }
 }

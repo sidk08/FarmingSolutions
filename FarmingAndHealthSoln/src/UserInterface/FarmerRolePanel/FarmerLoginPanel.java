@@ -13,6 +13,7 @@ import Business.Network.Network;
 import Business.Organization.ExpertOrganization;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
+import UserInterface.DoctorRolePanel.DoctorExpert;
 import UserInterface.ExpertRolePanel.FarmerDetailsInformationJPanel;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
@@ -147,6 +148,10 @@ public class FarmerLoginPanel extends javax.swing.JPanel {
 
     private void btnConsultDoctor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultDoctor1ActionPerformed
         // TODO add your handling code here:
+         FarmerDocRequestPanel doctorpanel = new FarmerDocRequestPanel(container,account, organization,enterprise, network, system);
+        container.add("FarmerDocRequestPanel", doctorpanel);
+        CardLayout layout = (CardLayout) container.getLayout();
+        layout.next(container);
     }//GEN-LAST:event_btnConsultDoctor1ActionPerformed
 
 

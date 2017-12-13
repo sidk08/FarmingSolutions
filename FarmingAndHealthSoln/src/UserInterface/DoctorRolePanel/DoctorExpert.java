@@ -75,7 +75,6 @@ public class DoctorExpert extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         requestTable = new javax.swing.JTable();
         healthCheckBtn = new javax.swing.JButton();
-        assignBtn = new javax.swing.JButton();
         pic = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -114,12 +113,6 @@ public class DoctorExpert extends javax.swing.JPanel {
         });
         jPanel1.add(healthCheckBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 830, 340, 60));
 
-        assignBtn.setBackground(new java.awt.Color(0, 153, 153));
-        assignBtn.setFont(new java.awt.Font("Cambria", 0, 24)); // NOI18N
-        assignBtn.setForeground(new java.awt.Color(255, 255, 255));
-        assignBtn.setText("Assign To Me");
-        jPanel1.add(assignBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 830, 250, 60));
-
         pic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/crop-imagecopy2.jpg"))); // NOI18N
         pic.setText("jLabel3");
         jPanel1.add(pic, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1570, 970));
@@ -152,7 +145,6 @@ public class DoctorExpert extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton assignBtn;
     private javax.swing.JButton healthCheckBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

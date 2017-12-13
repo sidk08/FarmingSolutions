@@ -108,7 +108,7 @@ public class AnalyseSoilDataJPanel extends javax.swing.JPanel {
                     int length = farmer.getSoilDataList().size();
                     if (length > 0) {
 
-                        this.soilScore = farmer.getSoilDataList().get(length - 1).getSoilScore();
+                        soilScore = farmer.getSoilDataList().get(length - 1).getSoilScore();
                         calculatePieData(soilScore);
                     } else {
 
@@ -143,8 +143,8 @@ public class AnalyseSoilDataJPanel extends javax.swing.JPanel {
         calculatePercentage();
         DefaultPieDataset dataset = new DefaultPieDataset();
         dataset.setValue("Poor", poorperc);
-        dataset.setValue("Avarage", averageperc);
-        dataset.setValue("Goof", goodperc);
+        dataset.setValue("Average", averageperc);
+        dataset.setValue("Good", goodperc);
 
         JFreeChart chart = ChartFactory.createPieChart(
                 "Soil Score", // chart title 
@@ -204,9 +204,9 @@ double temp;
 
         if (healthscore >= 0.0 && healthscore < 3.0) {
             poorcount++;
-        } else if (healthscore >= 3.0 && healthscore < 7.5) {
+        } else if (healthscore >= 3.0 && healthscore < 3.5) {
             averagecount++;
-        } else if (healthscore >= 7.5 && healthscore < 15.0) {
+        } else if (healthscore >= 3.5 && healthscore < 15.0) {
             goodcount++;
         }
 

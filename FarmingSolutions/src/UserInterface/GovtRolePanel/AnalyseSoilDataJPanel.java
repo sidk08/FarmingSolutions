@@ -202,11 +202,11 @@ double temp;
     private void calculatePieData(double healthscore) {
         // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 
-        if (healthscore >= 0.0 && healthscore < 3.0) {
+        if (healthscore >= 0.0 && healthscore < 1.9) {
             poorcount++;
-        } else if (healthscore >= 3.0 && healthscore < 3.5) {
+        } else if (healthscore >= 1.9 && healthscore < 5.0) {
             averagecount++;
-        } else if (healthscore >= 3.5 && healthscore < 15.0) {
+        } else if (healthscore >= 5.0 && healthscore < 15.0) {
             goodcount++;
         }
 
